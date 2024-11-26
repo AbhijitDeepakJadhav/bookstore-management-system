@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application.name: bookstore-management-system
+  datasource:
+    url: jdbc:mysql://localhost:3306/local_bookdb?allowPublicKeyRetrieval=true&useSSL=false
+    username: ADJ
+    password: adj@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      idle-timeout: 30000
+      connection-timeout: 20000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
