@@ -19,6 +19,7 @@ public class BookController {
     @PostMapping("/createBook")
     public UUID createBook(@RequestBody Book book) {
         return bookService.createBook(book);
+
     }
 
     @GetMapping("/getBook/{id}")
